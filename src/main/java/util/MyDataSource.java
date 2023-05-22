@@ -5,7 +5,7 @@ public class MyDataSource {
 	private  String pwd = null;
 	private  String url = null;
 	private  String driver = null;
-	private String coleccionDepartamentos = null;
+	private String coleccion = null;
 	
 	
 	
@@ -58,14 +58,17 @@ public class MyDataSource {
 	}
 
 
-	public String getColeccionDepartamentos() {
-		return coleccionDepartamentos;
+	public String getColeccion() {
+		return coleccion;
 	}
 
 
-	public void setColeccionDepartamentos(String col_depts) {
-		this.coleccionDepartamentos = col_depts;
+	public void setColeccion(String coleccion) {
+		this.coleccion = coleccion;
 	}
+
+
+	
 	
 	
 }

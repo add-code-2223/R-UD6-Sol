@@ -2,21 +2,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package modelo.dao.departamento;
+package modelo.dao.book;
 
 
-import modelo.Departamento;
+import java.io.File;
+
+import modelo.Book;
 import modelo.dao.IGenericDao;
+import modelo.exceptions.InstanceNotFoundException;
 
 /**
  *
  * @author mfernandez
  */
-public interface IDepartamentoDao extends IGenericDao<Departamento>{
+public interface IBookDao extends IGenericDao<Book>{
     
 
 	
-	public boolean exists(Integer dept);
+
+
+	public boolean store(String coleccion, File file) throws InstanceNotFoundException;
 	
 	
 	

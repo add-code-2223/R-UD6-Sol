@@ -11,7 +11,7 @@ public class ConnectionManager {
 	private static final String USER_KEY = "user";
 	private static final String PWD_KEY = "pwd";
 	private static final String DRIVER_KEY = "driver";
-	private static final String COL_DEPTS_KEY = "coleccionDepartamentos";
+	private static final String COL_KEY = "coleccion";
 
 	private static MyDataSource datasource = null;
 	
@@ -29,11 +29,11 @@ public class ConnectionManager {
 				String user = properties.getProperty(USER_KEY);
 				String pwd = properties.getProperty(PWD_KEY);
 				String driver = properties.getProperty(DRIVER_KEY);
-				String col_depts = properties.getProperty(COL_DEPTS_KEY);
+				String col = properties.getProperty(COL_KEY);
 
 				datasource = new MyDataSource(user, pwd, url, driver);
 				
-				datasource.setColeccionDepartamentos(col_depts);
+				datasource.setColeccion(col);
 				
 
 
