@@ -22,7 +22,7 @@ import modelo.Book;
 import modelo.servicio.book.IServicioBook;
 import modelo.servicio.book.ServicioBook;
 
-public class SearchBookWindow extends JFrame {
+public class BookWindow extends JFrame {
 
 	/**
 	 * 
@@ -44,7 +44,7 @@ public class SearchBookWindow extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					SearchBookWindow frame = new SearchBookWindow();
+					BookWindow frame = new BookWindow();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -56,7 +56,7 @@ public class SearchBookWindow extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public SearchBookWindow() {
+	public BookWindow() {
 
 		bookServicio = new ServicioBook();
 
@@ -99,12 +99,19 @@ public class SearchBookWindow extends JFrame {
 		btnNewButton = new JButton("Mostrar todos los libros");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				addMensaje(true, "Buscando...");
-				List<Book> books = bookServicio.findAll();
-				DefaultListModel<Book> defModel = new DefaultListModel<>();
+				try {
+					addMensaje(true, "Buscando...");
+					List<Book> books = bookServicio.findAll();
+					DefaultListModel<Book> defModel = new DefaultListModel<>();
 
-				defModel.addAll(books);
-				JListBooks.setModel(defModel);
+					defModel.addAll(books);
+					JListBooks.setModel(defModel);
+				} catch (Exception ex) {
+					ex.printStackTrace();
+					clearJListModel();
+
+					addMensaje(true, "Ha ocurrido un problema y no se han podido recuperar los libros");
+				}
 
 			}
 		});
@@ -133,7 +140,5 @@ public class SearchBookWindow extends JFrame {
 		mensajes_text_Area.setText(oldText);
 
 	}
-
-	
 
 }

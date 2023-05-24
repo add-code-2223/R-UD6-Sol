@@ -119,7 +119,7 @@ public class BookEXistDao extends AbstractGenericDao<Book> implements IBookDao {
 		return null;
 	}
 
-	private Book stringNodeToDepartamento(String nodeString) {
+	private Book stringNodeToBook(String nodeString) {
 		Element node = null;
 		Book book = null;
 		try {
@@ -201,7 +201,7 @@ public class BookEXistDao extends AbstractGenericDao<Book> implements IBookDao {
 
 					System.out.println(res.getContent().toString());
 
-					book = stringNodeToDepartamento(res.getContent().toString());
+					book = stringNodeToBook(res.getContent().toString());
 					if (book != null) {
 						books.add(book);
 					}
