@@ -10,13 +10,14 @@
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
 	</properties>
-	<!-- https://mvnrepository.com/artifact/org/neodatis -->
+
 	<dependencies>
-	<dependency>
-			<groupId>net.sf.xmldb-org</groupId>
-			<artifactId>xmldb-api</artifactId>
-			<version>1.7.0</version>
-		</dependency>
+<!--		No es necesaria en la Prueba ud5-->
+<!--	<dependency>-->
+<!--			<groupId>net.sf.xmldb-org</groupId>-->
+<!--			<artifactId>xmldb-api</artifactId>-->
+<!--			<version>1.7.0</version>-->
+<!--		</dependency>-->
 		
 	
 		<!-- https://mvnrepository.com/artifact/org.exist-db/exist-core -->

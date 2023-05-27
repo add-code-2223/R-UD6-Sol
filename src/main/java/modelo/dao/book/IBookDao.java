@@ -20,8 +20,6 @@ public interface IBookDao extends IGenericDao<Book>{
 
 	
 
-
-	public boolean store(String coleccion, File file) throws InstanceNotFoundException;
 	
 	
 	

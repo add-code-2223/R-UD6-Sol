@@ -103,8 +103,11 @@ public class BookWindow extends JFrame {
 					addMensaje(true, "Buscando...");
 					List<Book> books = bookServicio.findAll();
 					DefaultListModel<Book> defModel = new DefaultListModel<>();
+					for (Book book : books) {
+						defModel.addElement(book);
+					}
 
-					defModel.addAll(books);
+					
 					JListBooks.setModel(defModel);
 				} catch (Exception ex) {
 					ex.printStackTrace();
