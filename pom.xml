@@ -26,5 +26,10 @@
 			<artifactId>exist-core</artifactId>
 			<version>6.2.0</version>
 		</dependency>
+		<dependency>
+			<groupId>es.teis.rud6</groupId>
+			<artifactId>ModelUtil</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>

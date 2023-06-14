@@ -26,9 +26,9 @@ import org.xmldb.api.base.ResourceSet;
 import org.xmldb.api.base.XMLDBException;
 import org.xmldb.api.modules.XQueryService;
 
+import es.teis.rud6.modelutil.dao.AbstractGenericDao;
+import es.teis.rud6.modelutil.exceptions.InstanceNotFoundException;
 import modelo.Book;
-import modelo.dao.AbstractGenericDao;
-import modelo.exceptions.InstanceNotFoundException;
 import util.ConnectionManager;
 import util.MyDataSource;
 
